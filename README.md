@@ -2,7 +2,21 @@
 
 A Django web application for managing personal tasks with priority levels and completion tracking.
 
-![Task Tracker Screenshot]
+# Task Tracker Screenshot
+
+### Homepage:
+
+<img src="https://github.com/user-attachments/assets/5c01604c-a7ae-4dd2-9444-b45da254c797" width="600"/>
+
+
+### Add Task:
+
+<img src="https://github.com/user-attachments/assets/e210a42c-af14-4f4f-b4d2-6ed3c4918d8a" width="600"/>
+
+
+## Features
+
+
 
 ## Features
 
