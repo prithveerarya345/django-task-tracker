@@ -1,0 +1,31 @@
+{% extends 'tasks/base.html' %}
+
+{% block content %}
+    <h2>Active Tasks</h2>
+    {% if tasks %}
+        {% for task in tasks %}
+            <div class="task {{ task.priority }}">
+                <h3>{{ task.title }}</h3>
+                <p>{{ task.description }}</p>
+                <p><strong>Priority:</strong> {{ task.get_priority_display }}</p>
+                <p><small>Created: {{ task.created_date|date:"F j, Y" }}</small></p>
+                <a href="{% url 'complete_task' task.id %}" class="complete-btn">Complete</a>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No active tasks. Good job!</p>
+    {% endif %}
+
+    <h2>Completed Tasks</h2>
+    {% if completed_tasks %}
+        {% for task in completed_tasks %}
+            <div class="task completed">
+                <h3>{{ task.title }}</h3>
+                <p>{{ task.description }}</p>
+                <p><small>Created: {{ task.created_date|date:"F j, Y" }}</small></p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No completed tasks yet.</p>
+    {% endif %}
+{% endblock %}
